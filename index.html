@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le rayon blanc</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="video-container">
+        <video autoplay muted id="motion-logo">
+            <source src="media/logo-motion.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="conteneur-citation">
+        <p id="citation"> 
+        Sont-ce des airs populaires, des bouts de concerts seigneuriaux, des restants d'hymnes publics ? L'eau est grise et bleue, large comme un bras de mer. - <strong>Un rayon blanc</strong>, tombant du haut du ciel, anéantit cette comédie.</p>
+        <p class="auteur">Arthur Rimbaud, 1873</p>
+    </div>
+    
+</body>
+<footer>
+    <div class="link-container">
+        <a id="link-acces" href="landing-page.html">continuer sur le site</a>
+    </div>
+</footer>
+
+<!-- fade out - fade in logo citation -->
+<script type='text/javascript'>
+    document.getElementById("motion-logo").addEventListener("ended", hideAndSeek);
+
+    function hideAndSeek(){
+        document.getElementById("video-container").style.opacity = 0;
+        document.getElementById("conteneur-citation").style.opacity = 1;
+        
+    }
+  </script>
+</html>
